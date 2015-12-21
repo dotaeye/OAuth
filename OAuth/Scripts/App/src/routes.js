@@ -5,6 +5,7 @@ import {
     App,
     Home,
     List,
+    Login,
     NotFound
 } from './containers';
 
@@ -40,7 +41,9 @@ export default (store) => {
 
             <IndexRoute component={Home}/>
 
-            <Route path='list'  component={List} />
+            <Route path='login' component={Login}/>
+
+            <Route path='list' component={List} onEnter={requireLogin}/>
 
             { /* Catch all route */ }
             <Route path='*' component={NotFound} status={404}/>

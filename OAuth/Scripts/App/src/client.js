@@ -14,7 +14,7 @@ import makeRouteHooksSafe from './utils/makeRouteHooksSafe';
 //    basename: '/App'
 //});
 
-const history=createHashHistory();
+const history = createHashHistory();
 
 const client = new ApiClient();
 
