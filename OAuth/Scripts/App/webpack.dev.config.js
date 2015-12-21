@@ -42,6 +42,14 @@ var config = {
                 test: /\.json$/,
                 exclude: /node_modules/,
                 loaders:['json-loader']
+            },
+            {
+                test: /\.css$/,
+                loaders: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.less$/,
+                loaders: ['style-loader','css-loader','less-loader']
             }
         ]
     },

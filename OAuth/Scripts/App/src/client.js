@@ -9,6 +9,8 @@ import createRoutes from './routes'
 import createStore from './stores/createStore'
 import ApiClient from './utils/ApiClient';
 import makeRouteHooksSafe from './utils/makeRouteHooksSafe';
+import 'antd/lib/index.css';
+
 
 //const history = useBasename(createHistory)({
 //    basename: '/App'

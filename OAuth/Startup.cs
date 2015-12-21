@@ -1,7 +1,7 @@
 ﻿using Owin;
 using System.Web.Http;
 
-namespace IdentitySample
+namespace OAuth
 {
     public partial class Startup
     {

@@ -1,0 +1,4 @@
+export const LOAD_ORDER = 'LOAD_ORDER'
+export const LOAD_ORDER_SUCCESS = 'LOAD_ORDER_SUCCESS'
+export const LOAD_ORDER_FAIL = 'LOAD_ORDER_FAIL'
+

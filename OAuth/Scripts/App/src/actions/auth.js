@@ -7,13 +7,12 @@ export function load() {
     };
 }
 
-export function login(account) {
+export function login(data) {
     return {
         types: [authTypes.LOGIN, authTypes.LOGIN_SUCCESS, authTypes.LOGIN_FAIL],
-        promise: (client) => client.post('/user/login', {
-            data: {
-                account
-            }
+        promise: (client) => client.post('/Token', {
+            data: data,
+            formEncoding:true
         })
     };
 }

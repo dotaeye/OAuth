@@ -1,10 +1,13 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-<div id="main"></div>
 
+@section styles{
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Scripts/App/src/public/styles/main.css")"/>
+    }
 
 @section scripts{
+
     <script type="text/javascript" src="http://localhost:5590/common.js"></script>
     <script type="text/javascript" src="http://localhost:5590/main.js"></script>
 }

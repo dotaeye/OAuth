@@ -12,8 +12,11 @@ function formatUrl(path) {
 class _ApiClient {
     constructor(req) {
         methods.forEach((method) =>
-            this[method] = (path, { params, data } = {}) => new Promise((resolve, reject) => {
+            this[method] = (path, { params, data,formEncoding } = {}) => new Promise((resolve, reject) => {
                 const request = superagent[method](formatUrl(path));
+                if (formEncoding) {
+                    request.set('Content-Type', 'application/x-www-form-urlencoded');
+                }
                 if (params) {
                     request.query(params);
                 }

@@ -1,4 +1,4 @@
-﻿using IdentitySample.Models;
+﻿using OAuth.Models;
 using System.Data.Entity;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -6,7 +6,7 @@ using System.Web.Routing;
 using System.Web.Http;
 using OAuth;
 
-namespace IdentitySample
+namespace OAuth
 {
     // Note: For instructions on enabling IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=301868

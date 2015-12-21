@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux';
-import { FullScreen } from '../components/UI';
 import { Modal} from 'react-bootstrap';
 import connectData from '../utils/connectData';
 
@@ -13,9 +12,11 @@ class App extends Component {
 
     render() {
         return (
-            <FullScreen id="app">
+            <div id="app">
                 {this.props.children}
-            </FullScreen>
+            </div>
         );
+
+
     }
 }

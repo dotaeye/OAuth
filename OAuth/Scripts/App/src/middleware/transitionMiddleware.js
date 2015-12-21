@@ -1,11 +1,11 @@
-import {ROUTER_DID_CHANGE} from 'redux-router/lib/constants';
+import { UPDATE_PATH } from 'redux-simple-router'
 import getDataDependencies from '../utils/getDataDependencies';
 import env from '../utils/env';
 
 const locationsAreEqual = (locA, locB) => (locA.pathname === locB.pathname) && (locA.search === locB.search);
 
 export default ({getState, dispatch}) => next => action => {
-    if (action.type === ROUTER_DID_CHANGE) {
+    if (action.type === UPDATE_PATH) {
         if (getState().router && locationsAreEqual(action.payload.location, getState().router.location)) {
             return next(action);
         }
