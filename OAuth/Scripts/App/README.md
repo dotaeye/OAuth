@@ -1,2 +1,2 @@
-# Redux React Universal Study
+# Asp.net WebApi OAuth work with Redux React
 
