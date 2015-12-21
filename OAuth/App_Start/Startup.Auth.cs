@@ -63,11 +63,11 @@ namespace IdentitySample
             //    clientId: "",
             //    clientSecret: "");
 
-            var x = new FacebookAuthenticationOptions();
-            x.Scope.Add("email");
-            x.Scope.Add("user_photos");
-            x.AppId = "XXXXXXXXXXXXXXXX";
-            x.AppSecret = "XXXXXXXXXXXXXXXXXXX";
+            //var x = new FacebookAuthenticationOptions();
+            //x.Scope.Add("email");
+            //x.Scope.Add("user_photos");
+            //x.AppId = "XXXXXXXXXXXXXXXX";
+            //x.AppSecret = "XXXXXXXXXXXXXXXXXXX";
             //x.Provider = new FacebookAuthenticationProvider()
             //{
             //    OnAuthenticated = async context =>
@@ -79,8 +79,8 @@ namespace IdentitySample
             //                                             context.AccessToken));
             //    }
             //};
-            x.SignInAsAuthenticationType = DefaultAuthenticationTypes.ExternalCookie;
-            app.UseFacebookAuthentication(x);
+            //x.SignInAsAuthenticationType = DefaultAuthenticationTypes.ExternalCookie;
+            //app.UseFacebookAuthentication(x);
 
         }
     }
