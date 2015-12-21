@@ -129,33 +129,7 @@ module.exports = function (grunt) {
                         output: {
                             comments: false
                         }
-                    }),
-                    // generates webpack assets config to use hashed assets in production mode
-                    function webpackStatsPlugin() {
-                        this.plugin('done', function (stats) {
-                            var data = stats.toJson();
-                            var assets = data.assetsByChunkName;
-                            var output = {
-                                assets: {},
-                                cdnPath: this.options.output.publicPath
-                            };
-
-                            Object.keys(assets).forEach(function eachAsset(key) {
-                                var value = assets[key];
-                                // if `*.[chunkhash].min.js` regex matched, then use file name for key
-                                var matches = key.match(CHUNK_REGEX);
-                                if (matches) {
-                                    key = matches[1];
-                                }
-                                output.assets[key] = '/build/js/' + value;
-                            });
-                            //add essentials
-                            fs.writeFileSync(
-                                path.join(__dirname, '/src/public/build', 'assets.json'),
-                                JSON.stringify(output, null, 4)
-                            );
-                        });
-                    }
+                    })
                 ],
                 // removes verbosity from builds
                 progress: false

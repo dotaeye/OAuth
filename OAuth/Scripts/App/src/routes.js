@@ -4,6 +4,7 @@ import { load as loadAuth } from './actions/auth';
 import {
     App,
     Home,
+    List,
     NotFound
 } from './containers';
 
@@ -38,6 +39,8 @@ export default (store) => {
             { /* Routes requiring login */ }
 
             <IndexRoute component={Home}/>
+
+            <Route path='list'  component={List} />
 
             { /* Catch all route */ }
             <Route path='*' component={NotFound} status={404}/>

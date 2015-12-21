@@ -1,20 +1,29 @@
 import 'babel-core/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import createBrowserHistory from 'history/lib/createBrowserHistory'
-import {reduxReactRouter, ReduxRouter} from 'redux-router';
+import { Router } from 'react-router';
+import { Provider } from 'react-redux';
+import { createHashHistory, useBasename } from 'history'
+import { syncReduxAndRouter } from 'redux-simple-router'
 import createRoutes from './routes'
 import createStore from './stores/createStore'
 import ApiClient from './utils/ApiClient';
 import makeRouteHooksSafe from './utils/makeRouteHooksSafe';
 
+//const history = useBasename(createHistory)({
+//    basename: '/App'
+//});
+
+const history=createHashHistory();
+
 const client = new ApiClient();
 
-const store = createStore(reduxReactRouter, makeRouteHooksSafe(createRoutes), createBrowserHistory, client, window.__DATA__);
+const store = createStore(client);
+
+const routes = createRoutes(store);
 
 const component = (
-    <ReduxRouter routes={createRoutes(store)} />
+    <Router routes={routes} history={history}/>
 );
 
 ReactDOM.render(
