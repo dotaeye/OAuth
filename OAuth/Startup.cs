@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Owin;
-using Owin;
+﻿using Owin;
 
-[assembly: OwinStartup(typeof(OAuth.Startup))]
-
-namespace OAuth
+namespace IdentitySample
 {
     public partial class Startup
     {

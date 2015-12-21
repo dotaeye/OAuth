@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth", "OAuth\OAuth.csproj", "{DFC2BE3E-1494-4A90-86C6-5F7A5635304A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth", "OAuth\OAuth.csproj", "{0B19651E-A1AD-41FA-9330-0EADD641AB94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DFC2BE3E-1494-4A90-86C6-5F7A5635304A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFC2BE3E-1494-4A90-86C6-5F7A5635304A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFC2BE3E-1494-4A90-86C6-5F7A5635304A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFC2BE3E-1494-4A90-86C6-5F7A5635304A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B19651E-A1AD-41FA-9330-0EADD641AB94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B19651E-A1AD-41FA-9330-0EADD641AB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B19651E-A1AD-41FA-9330-0EADD641AB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B19651E-A1AD-41FA-9330-0EADD641AB94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

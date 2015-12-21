@@ -15,3 +15,5 @@ _[Ss]cripts
 *.ncrunchsolution
 *.dot[Cc]over
 *.pubxml
+OAuth/Scripts/App/node_modules
+OAuth/Scripts/App/.idea
