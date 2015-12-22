@@ -4,17 +4,17 @@ import { connect } from 'react-redux'
 import { Spin } from 'antd';
 import * as actionCreators from '../actions/order'
 
-const List = React.createClass({
+var List = React.createClass({
 
     componentDidMount(){
-        this.props.actions.load();
+        this.props.actions.load(this.props.token.access_token);
     },
 
     render() {
         return (
             <div id="list">
 
-                <h1>List Page Current UserName {this.props.user.userName}</h1>
+                <h1>List Page Current UserName {this.props.token.userName}</h1>
 
                 <div id='order'>
                     <Spin spining={this.props.orderLoading}/>
@@ -38,7 +38,7 @@ const List = React.createClass({
 
 function mapStateToProps(state) {
     return {
-        user: state.auth.user,
+        token: state.auth.token,
         orderList: state.order.list,
         orderLoading: state.order.loading
     }

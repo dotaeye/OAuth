@@ -16,7 +16,7 @@ export default function auth(state = initialState, action = {}) {
                 ...state,
                 loading: false,
                 loaded: true,
-                user: action.result
+                token: action.result
             };
         case authTypes.LOAD_SESSION_FAIL:
             return {
@@ -34,13 +34,13 @@ export default function auth(state = initialState, action = {}) {
             return {
                 ...state,
                 loggingIn: false,
-                user: action.result
+                token: action.result
             };
         case authTypes.LOGIN_FAIL:
             return {
                 ...state,
                 loggingIn: false,
-                user: null,
+                token: null,
                 loginError: action.error
             };
         case authTypes.LOGOUT:
@@ -52,7 +52,7 @@ export default function auth(state = initialState, action = {}) {
             return {
                 ...state,
                 loggingOut: false,
-                user: null
+                token: null
             };
         case authTypes.LOGOUT_FAIL:
             return {
