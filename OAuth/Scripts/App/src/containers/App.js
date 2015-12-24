@@ -6,6 +6,8 @@ import { History } from 'react-router'
 
 var App = React.createClass({
 
+    displayName: 'App',
+
     mixins: [History],
 
     componentWillReceiveProps(nextProps) {

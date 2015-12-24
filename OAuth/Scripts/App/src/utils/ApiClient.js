@@ -1,11 +1,12 @@
 import superagent from 'superagent';
-import clientConfig from '../configs';
+import configs from '../configs';
+import sessionStorage from './sessionStorage';
 
 const methods = ['get', 'post', 'put', 'patch', 'del'];
 
 function formatUrl(path) {
     let adjustedPath = path[0] !== '/' ? '/' + path : path;
-    adjustedPath = clientConfig.virtualPath + clientConfig.apiRoot + adjustedPath;
+    adjustedPath = configs.virtualPath + configs.apiRoot + adjustedPath;
     return adjustedPath;
 }
 
@@ -18,7 +19,8 @@ class _ApiClient {
                     request.set('Content-Type', 'application/x-www-form-urlencoded');
                 }
                 if (token) {
-                    request.set('Authorization', 'Bearer ' + token)
+                    let bearerToken = sessionStorage.get(configs.authTokenKey).access_token;
+                    request.set('Authorization', 'Bearer ' + bearerToken)
                 }
                 if (params) {
                     request.query(params);

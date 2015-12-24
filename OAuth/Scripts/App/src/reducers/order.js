@@ -23,6 +23,23 @@ export default function order(state = initialState, action = {}) {
                 loading: false,
                 error: action.error
             };
+        case orderTypes.LOAD_ORDER_BY_ID:
+            return {
+                ...state,
+                singleLoading: true
+            };
+        case orderTypes.LOAD_ORDER_BY_ID_SUCCESS:
+            return {
+                ...state,
+                singleLoading: false,
+                current: action.result
+            };
+        case orderTypes.LOAD_ORDER_BY_ID_FAIL:
+            return {
+                ...state,
+                singleLoading: false,
+                error: action.error
+            };
      
         default:
             return state;

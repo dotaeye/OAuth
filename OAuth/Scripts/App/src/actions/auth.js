@@ -1,4 +1,5 @@
 import * as authTypes from '../contants/auth';
+import configs from '../configs';
 
 export function load() {
     return {
@@ -12,8 +13,9 @@ export function login(data) {
         types: [authTypes.LOGIN, authTypes.LOGIN_SUCCESS, authTypes.LOGIN_FAIL],
         promise: (client) => client.post('/Token', {
             data: data,
-            formEncoding:true
-        })
+            formEncoding: true
+        }),
+        storageKey: configs.authTokenKey
     };
 }
 
@@ -22,4 +24,11 @@ export function logout() {
         types: [authTypes.LOGOUT, authTypes.LOGOUT_SUCCESS, authTypes.LOGOUT_FAIL],
         promise: (client) => client.get('/user/logout')
     };
+}
+
+export function loadAuthToken(token) {
+    return {
+        type: authTypes.LOAD_AUTH_TOKEN,
+        result: token
+    }
 }

@@ -51,6 +51,7 @@
     "react-hot-loader": "^1.2.8",
     "react-transform-catch-errors": "^1.0.0",
     "redbox-react": "^1.2.0",
+    "redux-devtools": "^3.0.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"

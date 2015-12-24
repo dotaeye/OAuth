@@ -15,6 +15,12 @@ namespace OAuth.Controllers
         {
             return Ok(Order.CreateOrders());
         }
+
+        public IHttpActionResult Get(int id)
+        {
+
+            return Ok(Order.CreateOrders().Single(x => x.OrderID == id));
+        }
     }
 
     public class Order

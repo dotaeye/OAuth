@@ -25,6 +25,13 @@ export default function auth(state = initialState, action = {}) {
                 loaded: false,
                 error: action.error
             };
+        case authTypes.LOAD_AUTH_TOKEN:
+            return {
+                ...state,
+                loading: false,
+                loaded: true,
+                token: action.result
+            };
         case authTypes.LOGIN:
             return {
                 ...state,
